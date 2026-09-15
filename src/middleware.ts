@@ -9,8 +9,9 @@ export function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
-  const key = req.cookies.get('docs_auth')?.value;
-  if (key && process.env.DOCS_ACCESS_KEY && key === process.env.DOCS_ACCESS_KEY) {
+  const key = req.cookies.get('docs_auth')?.value?.trim().toLowerCase();
+  const expected = process.env.DOCS_ACCESS_KEY?.trim().toLowerCase();
+  if (key && expected && key === expected) {
     return NextResponse.next();
   }
 
