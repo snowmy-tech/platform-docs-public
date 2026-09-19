@@ -58,10 +58,13 @@ const nextConfig: NextConfig = {
 		return redirects;
 	},
 	webpack(config, { dev, webpack }) {
-		// The localized catch-all routes compile large MDX modules into webpack
-		// cache entries, which triggers noisy PackFileCacheStrategy big-string
-		// warnings during production builds.
-		if (!dev) config.cache = false;
+		// Enable webpack filesystem cache (persisted in .next/cache and carried by
+		// Vercel's build cache). Skipping it forced a full cold compile on every
+		// build (~4.3min). The PackFileCacheStrategy big-string warnings it may
+		// resurface are advisory, not build failures.
+		//
+		// NOTE: if memory pressure from MDX modules becomes an issue, scope the
+		// filesystem cache to specific rules instead of disabling it globally.
 		// Dynamic `import()` expressions in app routes expand to a lazy glob over
 		// every matching .mdx file. For non-default locales, translated pages may
 		// reference partials the pipeline hasn't produced yet. Redirect missing
