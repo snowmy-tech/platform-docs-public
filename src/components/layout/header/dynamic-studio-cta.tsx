@@ -1,5 +1,6 @@
 "use client"
-import { usePathname } from 'next/navigation'
+import { usePathname as useRawPathname } from 'next/navigation'
+import { stripLocale } from '@/i18n/utils'
 import { useLingo } from '@lingo.dev/react';
 import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/navigation.client';
@@ -85,7 +86,7 @@ function useCtaLabel(key: CtaKey) {
 }
 
 export const DynamicStudioCta = (props: React.ComponentProps<typeof Button>) => {
-  const pathname = usePathname()
+  const pathname = stripLocale(useRawPathname())
   const { href, key } = resolveCta(pathname)
   const label = useCtaLabel(key)
 
