@@ -51,7 +51,7 @@ export default async function Header({ locale }: { locale: Locale }) {
             </div>
             <LanguageDropdown />
             <ThemeToggle />
-            <HeaderCta href="https://mistral.ai/contact?utm_source=docs&utm_medium=header_cta&utm_campaign=studio_trial" target='_blank' variant="secondary" className="pointer-events-auto">{l.text('Reach out', { context: 'Call to contact Mistral' })}</HeaderCta>
+            <HeaderCta href="https://mistral.ai/contact" target='_blank' variant="secondary" className="pointer-events-auto">{l.text('Reach out', { context: 'Call to contact Mistral' })}</HeaderCta>
             <DynamicStudioCta className='pointer-events-auto' />
           </div>
         </div>

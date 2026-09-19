@@ -12,7 +12,7 @@ Créez et gérez des groupes d’utilisateurs, attribuez-les à des espaces de t
 
 <SectionTab as="h1" sectionId="before-you-start">Avant de commencer</SectionTab>
 
-Toutes les requêtes utilisent l’URL de base `https://console.mistral.ai/api/admin` et une clé API Admin dans l’en-tête `x-api-key`. Consultez [Authentification et clés API Admin](/admin/admin-api/authentication).
+Toutes les requêtes utilisent l’URL de base `https://console.snowmy.app/api/admin` et une clé API Admin dans l’en-tête `x-api-key`. Consultez [Authentification et clés API Admin](/admin/admin-api/authentication).
 
 <SectionTab as="h1" sectionId="manage-groups">Gérer les groupes</SectionTab>
 
@@ -20,11 +20,11 @@ Listez les groupes avec `page`, `page_size` et `search`, ou créez-en un. `name`
 
 ```bash
 # Lister les groupes
-curl https://console.mistral.ai/api/admin/user-groups \
+curl https://console.snowmy.app/api/admin/user-groups \
   -H "x-api-key: $ADMIN_API_KEY"
 
 # Créer un groupe
-curl -X POST https://console.mistral.ai/api/admin/user-groups \
+curl -X POST https://console.snowmy.app/api/admin/user-groups \
   -H "Content-Type: application/json" \
   -H "x-api-key: $ADMIN_API_KEY" \
   -d '{"name": "Interns", "description": "User group for interns"}'
@@ -33,14 +33,14 @@ curl -X POST https://console.mistral.ai/api/admin/user-groups \
 La réponse inclut l’`uuid` du groupe. Consultez, mettez à jour ou supprimez un groupe à l’aide de son UUID :
 
 ```bash
-curl https://console.mistral.ai/api/admin/user-groups/<GROUP_UUID> \
+curl https://console.snowmy.app/api/admin/user-groups/<GROUP_UUID> \
   -H "x-api-key: $ADMIN_API_KEY"
 
-curl -X PATCH https://console.mistral.ai/api/admin/user-groups/<GROUP_UUID> \
+curl -X PATCH https://console.snowmy.app/api/admin/user-groups/<GROUP_UUID> \
   -H "Content-Type: application/json" -H "x-api-key: $ADMIN_API_KEY" \
   -d '{"description": "Updated description"}'
 
-curl -X DELETE https://console.mistral.ai/api/admin/user-groups/<GROUP_UUID> \
+curl -X DELETE https://console.snowmy.app/api/admin/user-groups/<GROUP_UUID> \
   -H "x-api-key: $ADMIN_API_KEY"
 ```
 
@@ -50,16 +50,16 @@ Listez les membres, ou ajoutez ou retirez des membres en transmettant leurs iden
 
 ```bash
 # Lister les membres
-curl https://console.mistral.ai/api/admin/user-groups/<GROUP_UUID>/members \
+curl https://console.snowmy.app/api/admin/user-groups/<GROUP_UUID>/members \
   -H "x-api-key: $ADMIN_API_KEY"
 
 # Ajouter des membres
-curl -X POST https://console.mistral.ai/api/admin/user-groups/<GROUP_UUID>/members \
+curl -X POST https://console.snowmy.app/api/admin/user-groups/<GROUP_UUID>/members \
   -H "Content-Type: application/json" -H "x-api-key: $ADMIN_API_KEY" \
   -d '{"user_uuids": ["<USER_UUID_1>", "<USER_UUID_2>"]}'
 
 # Retirer des membres
-curl -X DELETE https://console.mistral.ai/api/admin/user-groups/<GROUP_UUID>/members \
+curl -X DELETE https://console.snowmy.app/api/admin/user-groups/<GROUP_UUID>/members \
   -H "Content-Type: application/json" -H "x-api-key: $ADMIN_API_KEY" \
   -d '{"user_uuids": ["<USER_UUID_1>"]}'
 ```
@@ -69,7 +69,7 @@ curl -X DELETE https://console.mistral.ai/api/admin/user-groups/<GROUP_UUID>/mem
 Pour ajouter tous les membres d’un groupe à un espace de travail, utilisez `provision-workspace`. Le paramètre `workspace_role_name` indique le nom du rôle à attribuer :
 
 ```bash
-curl -X POST https://console.mistral.ai/api/admin/user-groups/provision-workspace \
+curl -X POST https://console.snowmy.app/api/admin/user-groups/provision-workspace \
   -H "Content-Type: application/json" -H "x-api-key: $ADMIN_API_KEY" \
   -d '{
     "user_group_uuid": "<GROUP_UUID>",
@@ -82,28 +82,28 @@ Pour gérer individuellement les affectations aux espaces de travail, utilisez l
 
 ```bash
 # Lister les affectations d’un groupe aux espaces de travail
-curl https://console.mistral.ai/api/admin/user-groups/<GROUP_UUID>/workspaces \
+curl https://console.snowmy.app/api/admin/user-groups/<GROUP_UUID>/workspaces \
   -H "x-api-key: $ADMIN_API_KEY"
 
 # Attribuer le groupe à un espace de travail
-curl -X POST https://console.mistral.ai/api/admin/user-groups/<GROUP_UUID>/workspaces \
+curl -X POST https://console.snowmy.app/api/admin/user-groups/<GROUP_UUID>/workspaces \
   -H "Content-Type: application/json" -H "x-api-key: $ADMIN_API_KEY" \
   -d '{"workspace_uuid": "<WORKSPACE_UUID>", "role_names": ["user"]}'
 
 # Mettre à jour les rôles d’une affectation
-curl -X PATCH https://console.mistral.ai/api/admin/user-groups/<GROUP_UUID>/workspaces/<WORKSPACE_UUID> \
+curl -X PATCH https://console.snowmy.app/api/admin/user-groups/<GROUP_UUID>/workspaces/<WORKSPACE_UUID> \
   -H "Content-Type: application/json" -H "x-api-key: $ADMIN_API_KEY" \
   -d '{"role_names": ["workspace_admin"]}'
 
 # Retirer le groupe d’un espace de travail
-curl -X DELETE https://console.mistral.ai/api/admin/user-groups/<GROUP_UUID>/workspaces/<WORKSPACE_UUID> \
+curl -X DELETE https://console.snowmy.app/api/admin/user-groups/<GROUP_UUID>/workspaces/<WORKSPACE_UUID> \
   -H "x-api-key: $ADMIN_API_KEY"
 ```
 
 <SectionTab as="h2" variant="secondary" sectionId="group-org-role">Définir le rôle Organisation d’un groupe</SectionTab>
 
 ```bash
-curl -X PATCH https://console.mistral.ai/api/admin/user-groups/<GROUP_UUID>/organization-role \
+curl -X PATCH https://console.snowmy.app/api/admin/user-groups/<GROUP_UUID>/organization-role \
   -H "Content-Type: application/json" -H "x-api-key: $ADMIN_API_KEY" \
   -d '{"organization_role": "member"}'
 ```
@@ -113,7 +113,7 @@ curl -X PATCH https://console.mistral.ai/api/admin/user-groups/<GROUP_UUID>/orga
 Listez les rôles disponibles et leurs UUID. Le contrôle d’accès basé sur les rôles (RBAC) doit être activé pour l’Organisation.
 
 ```bash
-curl https://console.mistral.ai/api/admin/roles \
+curl https://console.snowmy.app/api/admin/roles \
   -H "x-api-key: $ADMIN_API_KEY"
 ```
 

@@ -14,7 +14,7 @@ Ce guide explique comment les données de télémétrie (logs, traces et métriq
 
 <SectionTab as="h1" sectionId="telemetry-setup">Configuration de la télémétrie</SectionTab>
 
-Par défaut, le worker exporte les **logs, traces et métriques** OpenTelemetry vers la plateforme d'observabilité hébergée par Mistral. Aucune configuration n'est requise : la télémétrie est authentifiée avec votre clé API Mistral et envoyée à l'endpoint de télémétrie de Mistral. C'est ce qui permet d'afficher directement dans Studio, sur la page [d'exécution](https://console.mistral.ai/build/workflows/executions), les logs et traces de vos workflows.
+Par défaut, le worker exporte les **logs, traces et métriques** OpenTelemetry vers la plateforme d'observabilité hébergée par Mistral. Aucune configuration n'est requise : la télémétrie est authentifiée avec votre clé API Mistral et envoyée à l'endpoint de télémétrie de Mistral. C'est ce qui permet d'afficher directement dans Studio, sur la page [d'exécution](https://console.snowmy.app/build/workflows/executions), les logs et traces de vos workflows.
 
 Vous pouvez également envoyer les données de télémétrie vers votre propre pile d’observabilité ou les désactiver. Consultez la section **Configurer l’export des données de télémétrie** à la fin de cette page.
 
@@ -22,7 +22,7 @@ Vous pouvez également envoyer les données de télémétrie vers votre propre p
 
 Les traces capturent les détails d'exécution (spans, timings, erreurs) et sont optimisées pour le débogage et l'analyse de performance. Elles sont indépendantes des événements de tâches personnalisés.
 
-Les logs d’exécution sont également disponibles dans Studio. Ouvrez <AppLink href="https://console.mistral.ai/build/workflows/executions" app="studio" path={["Workflows", "Executions"]} /> et sélectionnez une exécution pour consulter ses logs sur la page correspondante.
+Les logs d’exécution sont également disponibles dans Studio. Ouvrez <AppLink href="https://console.snowmy.app/build/workflows/executions" app="studio" path={["Workflows", "Executions"]} /> et sélectionnez une exécution pour consulter ses logs sur la page correspondante.
 
 <SectionTab as="h2" variant="secondary" sectionId="activity-observability">Observabilité des activités</SectionTab>
 

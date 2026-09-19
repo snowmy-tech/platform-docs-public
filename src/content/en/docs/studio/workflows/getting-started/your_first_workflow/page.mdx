@@ -17,7 +17,7 @@ This guide walks you through creating a workflow that executes a single activity
 
 To complete this quickstart, you need:
 
-1. A [Mistral account](https://console.mistral.ai/).
+1. A [Mistral account](https://console.snowmy.app/).
 1. [Python](https://www.python.org/downloads/) 3.12 or later installed on your machine.
 1. [uv](https://docs.astral.sh/uv/getting-started/installation/) installed in your environment (`uvx` ships with `uv`).
 
@@ -33,7 +33,7 @@ uvx mistralai-workflows-cli@latest setup
 
 This scaffolds a ready-to-run Python project with the Workflows SDK already configured, a minimal example workflow, and helper commands to run your worker and trigger executions.
 
-The command prompts you to [generate a Mistral API key in the Mistral Console](https://console.mistral.ai/home?profile_dialog=api-keys).
+The command prompts you to [generate a Mistral API key in the Mistral Console](https://console.snowmy.app/home?profile_dialog=api-keys).
 Follow the prompts to generate the API key, and then pass it to the command when requested. API keys are only accessible once.
 
 Open the project directory in the IDE of your choice. The default name is `my-workflow`, but it matches whatever you entered when prompted during setup.
@@ -122,7 +122,7 @@ The `my-workflow` project also includes a `Makefile` command to trigger workflow
 <Tabs>
   <TabItem value="console" label="Console">
 
-1. Open the [Mistral Console](https://console.mistral.ai/) and navigate to the workspace where you created your API key.
+1. Open the [Mistral Console](https://console.snowmy.app/) and navigate to the workspace where you created your API key.
 1. Click **Workflows** in the sidebar.
 1. Select **hello-world**.
 1. Launch the workflow using the **Start Workflow** button and the input `{"name": <your_name>}`.

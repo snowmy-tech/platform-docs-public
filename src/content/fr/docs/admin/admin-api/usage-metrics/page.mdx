@@ -16,14 +16,14 @@ L’API Admin expose deux types de données de consommation :
 
 <SectionTab as="h1" sectionId="before-you-start">Avant de commencer</SectionTab>
 
-Vous avez besoin d’une clé API Admin créée dans le Backoffice. Chaque requête utilise l’URL de base `https://console.mistral.ai/api/admin` et l’en-tête `x-api-key`. Consultez [Authentification de l’API Admin](/admin/admin-api/authentication).
+Vous avez besoin d’une clé API Admin créée dans le Backoffice. Chaque requête utilise l’URL de base `https://console.snowmy.app/api/admin` et l’en-tête `x-api-key`. Consultez [Authentification de l’API Admin](/admin/admin-api/authentication).
 
 <SectionTab as="h1" sectionId="billing-usage">Données de facturation</SectionTab>
 
 Consultez le coût et la consommation de l’Organisation. Les paramètres `month`, `year` et `workspace_id` sont facultatifs. `month` et `year` sont des nombres entiers. Vous pouvez donc utiliser `5` ou `05`.
 
 ```bash
-curl "https://console.mistral.ai/api/admin/usage?month=5&year=2026" \
+curl "https://console.snowmy.app/api/admin/usage?month=5&year=2026" \
   -H "x-api-key: $ADMIN_API_KEY"
 ```
 
@@ -35,18 +35,18 @@ Consultez les limites actuelles de l’Organisation :
 
 ```bash
 # Limites de dépenses
-curl https://console.mistral.ai/api/admin/spend-limit \
+curl https://console.snowmy.app/api/admin/spend-limit \
   -H "x-api-key: $ADMIN_API_KEY"
 
 # Limites de débit (requêtes par seconde et limites de tokens par modèle)
-curl https://console.mistral.ai/api/admin/rate-limit \
+curl https://console.snowmy.app/api/admin/rate-limit \
   -H "x-api-key: $ADMIN_API_KEY"
 ```
 
 Définissez la limite de dépenses mensuelle de l’Organisation :
 
 ```bash
-curl -X POST https://console.mistral.ai/api/admin/spend-limit \
+curl -X POST https://console.snowmy.app/api/admin/spend-limit \
   -H "Content-Type: application/json" \
   -H "x-api-key: $ADMIN_API_KEY" \
   -d '{"amount": 500, "no_monthly_limit": false}'
@@ -64,7 +64,7 @@ Les endpoints `/analytics/lechat` fournissent les données d’activité de la m
 <SectionTab as="h2" variant="secondary" sectionId="lechat-by-user">Par utilisateur</SectionTab>
 
 ```bash
-curl "https://console.mistral.ai/api/admin/analytics/lechat/usage/by_user_stats?start_time=1704067200&end_time=1706745600" \
+curl "https://console.snowmy.app/api/admin/analytics/lechat/usage/by_user_stats?start_time=1704067200&end_time=1706745600" \
   -H "x-api-key: $ADMIN_API_KEY"
 ```
 
@@ -73,7 +73,7 @@ La réponse indique, pour chaque utilisateur, le nombre de messages, de fichiers
 <SectionTab as="h2" variant="secondary" sectionId="lechat-by-agent">Par agent</SectionTab>
 
 ```bash
-curl "https://console.mistral.ai/api/admin/analytics/lechat/usage/by_agent_stats?start_time=1704067200&end_time=1706745600" \
+curl "https://console.snowmy.app/api/admin/analytics/lechat/usage/by_agent_stats?start_time=1704067200&end_time=1706745600" \
   -H "x-api-key: $ADMIN_API_KEY"
 ```
 
@@ -84,7 +84,7 @@ La réponse reprend les mêmes indicateurs d’activité, regroupés par agent, 
 Ajoutez `granularity` (`hour`, `day`, `week` ou `month`) pour regrouper les résultats.
 
 ```bash
-curl "https://console.mistral.ai/api/admin/analytics/lechat/usage/by_time_stats?start_time=1704067200&end_time=1706745600&granularity=day" \
+curl "https://console.snowmy.app/api/admin/analytics/lechat/usage/by_time_stats?start_time=1704067200&end_time=1706745600&granularity=day" \
   -H "x-api-key: $ADMIN_API_KEY"
 ```
 
@@ -99,7 +99,7 @@ Les endpoints `/analytics/vibe` fournissent les données d’activité de Vibe C
 Transmettez `workspace_id` pour limiter le rapport à un seul espace de travail, ou omettez-le pour tous les espaces de travail.
 
 ```bash
-curl "https://console.mistral.ai/api/admin/analytics/vibe/usage/by_workspace?start_time=1704067200&end_time=1706745600" \
+curl "https://console.snowmy.app/api/admin/analytics/vibe/usage/by_workspace?start_time=1704067200&end_time=1706745600" \
   -H "x-api-key: $ADMIN_API_KEY"
 ```
 
@@ -108,13 +108,13 @@ La réponse fournit des séries quotidiennes pour les sessions (CLI, ACP et API)
 <SectionTab as="h2" variant="secondary" sectionId="vibe-by-organization">Par Organisation</SectionTab>
 
 ```bash
-curl "https://console.mistral.ai/api/admin/analytics/vibe/usage/by_organization?start_time=1704067200&end_time=1706745600" \
+curl "https://console.snowmy.app/api/admin/analytics/vibe/usage/by_organization?start_time=1704067200&end_time=1706745600" \
   -H "x-api-key: $ADMIN_API_KEY"
 ```
 
 La réponse fournit des séries quotidiennes pour les suggestions `next_edit` par résultat, les utilisateurs actifs `next_edit` et les lignes de code modifiées.
 
-{/* TODO: confirm the base host for the /analytics/* endpoints. They are generated from the datalake-api service (datalake-api/specs/openapi-admin.json); verify they are served from console.mistral.ai/api/admin or a separate host. */}
+{/* TODO: confirm the base host for the /analytics/* endpoints. They are generated from the datalake-api service (datalake-api/specs/openapi-admin.json); verify they are served from console.snowmy.app/api/admin or a separate host. */}
 
 <SectionTab as="h1" sectionId="next-steps">Étapes suivantes</SectionTab>
 

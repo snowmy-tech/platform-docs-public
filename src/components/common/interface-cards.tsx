@@ -37,7 +37,7 @@ export function InterfaceCards() {
             hoverText: 'group-hover:text-[#0082E6]',
             activeBorder: 'border-[#0082E6]/50',
             description: l.text('The developer console. It provides everything you need to build, test, and optimize AI applications on the Mistral API.', { context: 'Description of the Studio product' }),
-            href: 'https://console.mistral.ai',
+            href: 'https://console.snowmy.app',
             ctaText: l.text('Try Studio', { context: 'Call to open Studio' }),
         },
         {

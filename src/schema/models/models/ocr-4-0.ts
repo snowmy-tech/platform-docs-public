@@ -41,6 +41,6 @@ export default {
 
   },
   metadata: { replacement: 'OCR 4.1' },
-  playground: 'https://console.mistral.ai/build/document-ai/ocr-playground',
+  playground: 'https://console.snowmy.app/build/document-ai/ocr-playground',
   legacy: false,
 } as const satisfies StaticModel;

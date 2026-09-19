@@ -1377,7 +1377,7 @@
   "/components/schemas/WorkspacesOut/properties/total/description": "Total number of Workspaces that match the request.",
   "/components/securitySchemes/AdminApiKey/description": "Admin-scoped API key passed as a bearer token. Standard workspace/inference API keys are rejected.",
   "/components/securitySchemes/DashboardUserContextAuth/description": "Public API key. The gateway validates the key and forwards authenticated user context to the dashboard.",
-  "/info/description": "Our Chat Completion and Embeddings APIs specification. Create your account on [La Plateforme](https://console.mistral.ai) to get access and read the [docs](https://docs.mistral.ai) to learn how to use it.",
+  "/info/description": "Our Chat Completion and Embeddings APIs specification. Create your account on [La Plateforme](https://console.snowmy.app) to get access and read the [docs](https://docs.mistral.ai) to learn how to use it.",
   "/paths/~1v1~1admin~1analytics~1vibe~1code~1usage~1by_organization/get/description": "Get Vibe Code usage for the Organization.",
   "/paths/~1v1~1admin~1analytics~1vibe~1code~1usage~1by_organization/get/parameters/0/description": "Start of the queried window, as a Unix timestamp in seconds.",
   "/paths/~1v1~1admin~1analytics~1vibe~1code~1usage~1by_organization/get/parameters/0/schema/description": "Start of the queried window, as a Unix timestamp in seconds.",

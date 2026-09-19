@@ -35,7 +35,7 @@ La clé est affichée uniquement lors de sa création. Si vous la perdez, vous d
 
 Envoyez les requêtes de l’API Admin à l’URL de base de l’API Admin et transmettez votre clé API Admin dans l’en-tête `x-api-key`.
 
-- **URL de base** : `https://console.mistral.ai/api/admin`
+- **URL de base** : `https://console.snowmy.app/api/admin`
 - **En-tête d’authentification** : `x-api-key: <ADMIN_API_KEY>`
 
 Définissez la clé comme variable d’environnement avant d’envoyer des requêtes :
@@ -47,14 +47,14 @@ export ADMIN_API_KEY="your-admin-api-key"
 Envoyez ensuite une requête à un endpoint. Par exemple, pour lister les utilisateurs de l’Organisation rattachée à la clé :
 
 ```bash
-curl "https://console.mistral.ai/api/admin/users?page=1&page_size=50" \
+curl "https://console.snowmy.app/api/admin/users?page=1&page_size=50" \
   -H "x-api-key: $ADMIN_API_KEY"
 ```
 
 Pour les requêtes avec un corps JSON, incluez aussi l’en-tête `Content-Type` :
 
 ```bash
-curl -X POST https://console.mistral.ai/api/admin/users-invite \
+curl -X POST https://console.snowmy.app/api/admin/users-invite \
   -H "x-api-key: $ADMIN_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"email": "ada@example.com"}'

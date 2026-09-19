@@ -38,7 +38,7 @@ Connector slots ship with the Mistral plugin:
 uv add "mistralai-workflows[mistralai]"
 ```
 
-You also need at least one [Connector](/studio/connectors) registered for your Workspace. Create one from <AppLink href="https://console.mistral.ai/build/connectors" app="studio" path={["Context", "Connectors"]} />, or with the [Connectors API](/studio/connectors/management).
+You also need at least one [Connector](/studio/connectors) registered for your Workspace. Create one from <AppLink href="https://console.snowmy.app/build/connectors" app="studio" path={["Context", "Connectors"]} />, or with the [Connectors API](/studio/connectors/management).
 
 [Add credentials](#credentials) before running a workflow:
 
@@ -49,7 +49,7 @@ You also need at least one [Connector](/studio/connectors) registered for your W
 
 Each user stores their own credentials per Connector in Studio. You can keep a single credential or store several named credentials, such as two GitHub PATs with different scopes, or a personal and a work Microsoft account. Then, [pick which credential to use](#runtime-binding) per workflow execution.
 
-1. Open <AppLink href="https://console.mistral.ai/build/connectors" app="studio" path={["Context", "Connectors"]} /> and select a Connector.
+1. Open <AppLink href="https://console.snowmy.app/build/connectors" app="studio" path={["Context", "Connectors"]} /> and select a Connector.
 2. Switch to the `Credentials` tab.
 3. Click `+ Add credentials`.
 4. Give the credential a name that uses only alphanumeric characters and hyphens.
@@ -271,10 +271,10 @@ Because `run_as` is set per Connector, a single Workflow can mix identities. For
 
 <SectionTab as="h3" variant="secondary" sectionId="execute-studio">From Studio</SectionTab>
 
-Open <AppLink href="https://console.mistral.ai/build/workflows" app="studio">Workflows</AppLink>, pick your workflow, and click `Start workflow`.
+Open <AppLink href="https://console.snowmy.app/build/workflows" app="studio">Workflows</AppLink>, pick your workflow, and click `Start workflow`.
 
 - If you have **multiple named credentials** for a Connector, the launch dialog lets you pick which one to use for this execution.
-- To add or update credentials per Connector before starting a workflow, go to <AppLink href="https://console.mistral.ai/build/connectors" app="studio" path={["Context", "Connectors"]} /> and open the `Credentials` tab.
+- To add or update credentials per Connector before starting a workflow, go to <AppLink href="https://console.snowmy.app/build/connectors" app="studio" path={["Context", "Connectors"]} /> and open the `Credentials` tab.
 - As a **fallback**, if you start a workflow with an OAuth2 Connector without any credentials, the execution panel shows an OAuth prompt (orange key icon). Complete the flow in a browser tab and the workflow resumes automatically.
 
 <SectionTab as="h3" variant="secondary" sectionId="execute-sdk">From the SDK</SectionTab>

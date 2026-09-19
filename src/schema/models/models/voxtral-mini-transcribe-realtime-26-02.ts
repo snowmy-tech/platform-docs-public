@@ -55,6 +55,6 @@ export default {
 
   },
   metadata: {},
-  playground: 'https://console.mistral.ai/build/audio/realtime',
+  playground: 'https://console.snowmy.app/build/audio/realtime',
   legacy: false,
 } as const satisfies StaticModel;

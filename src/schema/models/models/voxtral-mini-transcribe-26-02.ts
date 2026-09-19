@@ -39,6 +39,6 @@ export default {
 
   },
   metadata: {},
-  playground: 'https://console.mistral.ai/build/audio/speech-to-text',
+  playground: 'https://console.snowmy.app/build/audio/speech-to-text',
   legacy: false,
 } as const satisfies StaticModel;

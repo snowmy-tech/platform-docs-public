@@ -55,6 +55,6 @@ export default {
 
   },
 metadata: {deprecationDate: '2026-02-27', retirementDate: '2026-05-31', replacement: 'Mistral Small 4'},
-  playground: 'https://console.mistral.ai/build/playground',
+  playground: 'https://console.snowmy.app/build/playground',
   legacy: true,
 } as const satisfies StaticModel;

@@ -38,7 +38,7 @@ export const MISTRAL_CHAT_URL = process.env.MISTRAL_CHAT_URL
 
 export const MISTRAL_STUDIO_URL = process.env.MISTRAL_STUDIO_URL
   ? new URL(process.env.MISTRAL_STUDIO_URL)
-  : new URL('https://console.mistral.ai/home');
+  : new URL('https://console.snowmy.app/home');
 
 export const MISTRAL_BRAND_GUIDELINES_URL = process.env
   .MISTRAL_BRAND_GUIDELINES_URL
@@ -51,7 +51,7 @@ export const MISTRAL_API_REFERENCE_URL = process.env.MISTRAL_API_REFERENCE_URL
 
 export const MISTRAL_CONSOLE_URL = process.env.MISTRAL_CONSOLE_URL
   ? new URL(process.env.MISTRAL_CONSOLE_URL)
-  : new URL('https://console.mistral.ai');
+  : new URL('https://console.snowmy.app');
 export const MISTRAL_HELP_CENTER_URL = process.env.MISTRAL_HELP_CENTER_URL
   ? new URL(process.env.MISTRAL_HELP_CENTER_URL)
   : new URL('https://help.mistral.ai');

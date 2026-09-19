@@ -58,6 +58,6 @@ export default {
 
   },
   metadata: {deprecationDate: '2026-05-22', retirementDate: '2026-06-30', replacement: 'Leanstral 1.5'},
-  playground: 'https://console.mistral.ai/build/playground',
+  playground: 'https://console.snowmy.app/build/playground',
   legacy: true,
 } as const satisfies StaticModel;

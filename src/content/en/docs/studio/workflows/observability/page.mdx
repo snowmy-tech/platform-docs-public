@@ -14,7 +14,7 @@ This guide covers how worker telemetry (logs, traces, and metrics) is exported, 
 
 <SectionTab as="h1" sectionId="telemetry-setup">Telemetry setup</SectionTab>
 
-By default, the worker exports OpenTelemetry **logs, traces, and metrics** to Mistral's hosted observability platform. No setup is required: telemetry is authenticated with your Mistral API key and sent to Mistral's telemetry endpoint. This is what makes your workflow logs and traces visible directly in Studio, on the [execution page](https://console.mistral.ai/build/workflows/executions).
+By default, the worker exports OpenTelemetry **logs, traces, and metrics** to Mistral's hosted observability platform. No setup is required: telemetry is authenticated with your Mistral API key and sent to Mistral's telemetry endpoint. This is what makes your workflow logs and traces visible directly in Studio, on the [execution page](https://console.snowmy.app/build/workflows/executions).
 
 You can also send telemetry to your own observability stack or turn it off. See **Configuring telemetry export** at the end of this page.
 
@@ -22,7 +22,7 @@ You can also send telemetry to your own observability stack or turn it off. See 
 
 Traces capture execution details (spans, timings, errors) and are optimized for debugging and performance analysis. They are independent from custom task events.
 
-Execution logs are also available in Studio. Open <AppLink href="https://console.mistral.ai/build/workflows/executions" app="studio" path={["Workflows", "Executions"]} /> and select an execution to inspect its logs on the execution page.
+Execution logs are also available in Studio. Open <AppLink href="https://console.snowmy.app/build/workflows/executions" app="studio" path={["Workflows", "Executions"]} /> and select an execution to inspect its logs on the execution page.
 
 <SectionTab as="h2" variant="secondary" sectionId="activity-observability">Activity observability</SectionTab>
 

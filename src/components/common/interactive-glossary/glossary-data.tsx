@@ -108,7 +108,7 @@ export function getGlossaryData(l: Lingo): GlossaryTerm[] {
         },
         {
             term: l.text('Studio', { context: 'Glossary term for Mistral\'s developer platform' }),
-            definition: l.text("Mistral AI's SaaS API and developer platform at console.mistral.ai. Provides API access, the Studio developer console, and model management tools.", { context: 'Definition of the Studio glossary term' }),
+            definition: l.text("Mistral AI's SaaS API and developer platform at console.snowmy.app. Provides API access, the Studio developer console, and model management tools.", { context: 'Definition of the Studio glossary term' }),
             categories: categories(['platform'], l),
         },
         {

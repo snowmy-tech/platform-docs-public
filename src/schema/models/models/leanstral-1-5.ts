@@ -58,6 +58,6 @@ export default {
     features: ['chat-completions', 'function-calling', 'agents-conversations', 'structured-outputs'],
   },
   metadata: { retirementDate: '2026-09-30' },
-  playground: 'https://console.mistral.ai/build/playground',
+  playground: 'https://console.snowmy.app/build/playground',
   legacy: false,
 } as const satisfies StaticModel;

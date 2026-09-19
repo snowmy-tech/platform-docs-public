@@ -123,7 +123,7 @@ export default async function Footer({ locale }: { locale: Locale }) {
         links: [
           {
             label: 'Studio',
-            href: 'https://console.mistral.ai',
+            href: 'https://console.snowmy.app',
           },
           { label: 'Vibe', href: `${MISTRAL_URL}/products/vibe` },
           { label: 'Mistral Code', href: `${MISTRAL_URL}/products/mistral-code` },

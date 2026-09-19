@@ -983,7 +983,7 @@
   "Organization roles assigned to the member.": "Rôles d'organisation attribués au membre.",
   "Organization roles available to the Organization.": "Rôles d'organisation disponibles pour l'Organisation.",
   "Original filename for extension detection": "Nom de fichier d'origine pour la détection de l'extension",
-  "Our Chat Completion and Embeddings APIs specification. Create your account on [La Plateforme](https://console.mistral.ai) to get access and read the [docs](https://docs.mistral.ai) to learn how to use it.": "Spécification de nos API de Chat Completion et Embeddings. Créez un compte sur [La Plateforme](https://console.mistral.ai) pour y accéder et consultez la [documentation](https://docs.mistral.ai) pour apprendre à l'utiliser.",
+  "Our Chat Completion and Embeddings APIs specification. Create your account on [La Plateforme](https://console.snowmy.app) to get access and read the [docs](https://docs.mistral.ai) to learn how to use it.": "Spécification de nos API de Chat Completion et Embeddings. Créez un compte sur [La Plateforme](https://console.snowmy.app) pour y accéder et consultez la [documentation](https://docs.mistral.ai) pour apprendre à l'utiliser.",
   "Output JSON schema of the query's model": "Schéma JSON de sortie du modèle de la requête",
   "Output JSON schema of the update's model": "Schéma JSON de sortie du modèle de la mise à jour",
   "Output audio format. Defaults to mp3.": "Format audio de sortie. Par défaut, mp3.",

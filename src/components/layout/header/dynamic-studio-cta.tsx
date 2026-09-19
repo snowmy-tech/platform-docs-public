@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/navigation.client';
 import { ArrowRightIcon } from '@/components/icons/pixel';
 
-const UTM = "?utm_source=docs&utm_medium=header_cta&utm_campaign=studio_trial"
+const UTM = ""
 
 type CtaKey =
   | 'studio'
@@ -18,32 +18,32 @@ type CtaKey =
   | 'vibeCode'
   | 'admin'
 
-const DEFAULT_CTA = { href: "https://console.mistral.ai", key: 'studio' as CtaKey }
+const DEFAULT_CTA = { href: "https://console.snowmy.app", key: 'studio' as CtaKey }
 
 const CTA_BY_PATH: Record<string, { href: string; key: CtaKey }> = {
 
   "/studio/audio/speech_to_text/offline_transcription": {
-    href: "https://console.mistral.ai/build/audio/speech-to-text",
+    href: "https://console.snowmy.app/build/audio/speech-to-text",
     key: 'audio',
   },
   "/studio/audio/speech_to_text/realtime_transcription": {
-    href: "https://console.mistral.ai/build/audio/realtime",
+    href: "https://console.snowmy.app/build/audio/realtime",
     key: 'realtime',
   },
   "/studio/batch-processing": {
-    href: "https://console.mistral.ai/build/batches",
+    href: "https://console.snowmy.app/build/batches",
     key: 'batch',
   },
   "/models": {
-    href: "https://console.mistral.ai/build/playground",
+    href: "https://console.snowmy.app/build/playground",
     key: 'studio',
   },
   "/inference/model-selection-guide": {
-    href: "https://console.mistral.ai/build/playground",
+    href: "https://console.snowmy.app/build/playground",
     key: 'studio',
   },
   "/studio/document-processing": {
-    href: "https://console.mistral.ai/build/document-ai/ocr-playground",
+    href: "https://console.snowmy.app/build/document-ai/ocr-playground",
     key: 'documentAi',
   },
 }

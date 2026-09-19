@@ -83,6 +83,6 @@ export default {
 
   },
   metadata: {},
-  playground: 'https://console.mistral.ai/build/playground',
+  playground: 'https://console.snowmy.app/build/playground',
   legacy: false,
 } as const satisfies StaticModel;

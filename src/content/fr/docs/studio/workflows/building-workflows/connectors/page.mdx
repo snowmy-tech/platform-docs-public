@@ -37,7 +37,7 @@ Les emplacements de connecteur sont fournis avec le plugin Mistral :
 uv add "mistralai-workflows[mistralai]"
 ```
 
-Vous devez également avoir enregistré au moins un [Connecteur](/studio/connectors) pour votre espace de travail. Créez-en un via <a href="https://console.mistral.ai/build/connectors" target="_blank" rel="noopener">Studio &rsaquo; Contexte &rsaquo; Connecteurs</a>, ou via l'[API Connecteurs](/studio/connectors/management).
+Vous devez également avoir enregistré au moins un [Connecteur](/studio/connectors) pour votre espace de travail. Créez-en un via <a href="https://console.snowmy.app/build/connectors" target="_blank" rel="noopener">Studio &rsaquo; Contexte &rsaquo; Connecteurs</a>, ou via l'[API Connecteurs](/studio/connectors/management).
 
 [Ajoutez des identifiants](#credentials) avant d'exécuter un workflow :
 
@@ -48,7 +48,7 @@ Vous devez également avoir enregistré au moins un [Connecteur](/studio/connect
 
 Chaque utilisateur stocke ses propres identifiants par connecteur dans Studio. Vous pouvez conserver un seul identifiant ou en stocker plusieurs nommés (par exemple deux PAT GitHub avec des autorisations différentes, ou un compte Microsoft personnel et un compte professionnel) et [choisir lequel utiliser](#runtime-binding) pour chaque exécution de workflow.
 
-1. Ouvrez <a href="https://console.mistral.ai/build/connectors" target="_blank" rel="noopener">Studio &rsaquo; Contexte &rsaquo; Connecteurs</a> puis sélectionnez un connecteur.
+1. Ouvrez <a href="https://console.snowmy.app/build/connectors" target="_blank" rel="noopener">Studio &rsaquo; Contexte &rsaquo; Connecteurs</a> puis sélectionnez un connecteur.
 2. Passez à l’onglet **Identifiants**.
 3. Cliquez sur **+ Ajouter des identifiants**, donnez-lui un nom (alphanumérique et tirets), puis effectuez le collage du token bearer ou suivez le flux OAuth.
 4. Un identifiant est toujours défini comme **par défaut**. Pour modifier le choix lorsqu'aucun nom n'est spécifié, éditez un identifiant puis définissez-le par défaut.
@@ -266,10 +266,10 @@ Comme `run_as` est défini par Connecteur, un seul Workflow peut mélanger les i
 
 <SectionTab as="h3" variant="secondary" sectionId="execute-studio">Depuis Studio</SectionTab>
 
-Ouvrez <a href="https://console.mistral.ai/build/workflows" target="_blank" rel="noopener">Studio &rsaquo; Workflows</a>, sélectionnez votre workflow puis cliquez sur **Démarrer le workflow**.
+Ouvrez <a href="https://console.snowmy.app/build/workflows" target="_blank" rel="noopener">Studio &rsaquo; Workflows</a>, sélectionnez votre workflow puis cliquez sur **Démarrer le workflow**.
 
 - Si vous avez **plusieurs identifiants nommés** pour un connecteur, la fenêtre de lancement vous laisse choisir lequel utiliser pour cette exécution.
-- Pour ajouter ou mettre à jour des identifiants par connecteur avant de lancer un workflow, rendez-vous dans <a href="https://console.mistral.ai/build/connectors" target="_blank" rel="noopener">Studio &rsaquo; Contexte &rsaquo; Connecteurs</a> puis ouvrez l’onglet **Identifiants**.
+- Pour ajouter ou mettre à jour des identifiants par connecteur avant de lancer un workflow, rendez-vous dans <a href="https://console.snowmy.app/build/connectors" target="_blank" rel="noopener">Studio &rsaquo; Contexte &rsaquo; Connecteurs</a> puis ouvrez l’onglet **Identifiants**.
 - En **solution de secours** : si vous lancez un workflow sur un connecteur OAuth2 sans identifiants enregistrés, le panneau d'exécution affiche une invite OAuth (icône de clé orange). Terminez le flux dans un onglet navigateur pour que le workflow reprenne automatiquement.
 
 <SectionTab as="h3" variant="secondary" sectionId="execute-sdk">Depuis le SDK</SectionTab>

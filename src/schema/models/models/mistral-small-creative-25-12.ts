@@ -39,6 +39,6 @@ export default {
 
   },
   metadata: {deprecationDate: '2026-03-31', retirementDate: '2026-04-30', replacement: 'Ministral 3 8B'},
-  playground: 'https://console.mistral.ai/build/playground',
+  playground: 'https://console.snowmy.app/build/playground',
   legacy: true,
 } as const satisfies StaticModel;

@@ -18,12 +18,12 @@ After setup, each generated project includes the workflow code, sample data, a w
 
 Before running a cookbook, make sure you have:
 
-1. A [Mistral account](https://console.mistral.ai/).
+1. A [Mistral account](https://console.snowmy.app/).
 2. Python 3.12 installed.
 3. [uvx](https://docs.astral.sh/uv/guides/tools/) available in your shell.
-4. A [Mistral API key](https://console.mistral.ai/home?profile_dialog=api-keys) for the workspace where you want to run workflows.
+4. A [Mistral API key](https://console.snowmy.app/home?profile_dialog=api-keys) for the workspace where you want to run workflows.
 
-You can inspect the execution timeline or complete a human approval step in [Studio](https://console.mistral.ai/build/workflows/executions).
+You can inspect the execution timeline or complete a human approval step in [Studio](https://console.snowmy.app/build/workflows/executions).
 
 <SectionTab as="h1" sectionId="set-up-a-cookbook-project">
   Set up a cookbook project
@@ -42,7 +42,7 @@ cd my-workflow # or the name of the folder you created
 make start-examples
 ```
 
-This registers the cookbook workflows with your workspace and keeps the worker ready to process executions. You can start an execution either from a second terminal with the example command shown under each cookbook, or from [Studio](https://console.mistral.ai/build/workflows).
+This registers the cookbook workflows with your workspace and keeps the worker ready to process executions. You can start an execution either from a second terminal with the example command shown under each cookbook, or from [Studio](https://console.snowmy.app/build/workflows).
 
 <SectionTab as="h1" sectionId="available-cookbooks">
   Available cookbooks
@@ -80,7 +80,7 @@ make execute-cargo-release \
   input='{"document_uri":"src/examples/cargo_release/sample_data/shipping_doc_anomaly.png","shipment_id":"BL-2024-RTD-004812"}'
 ```
 
-You can also start `cargo-release-compliance` in [Studio](https://console.mistral.ai/build/workflows?workflowSearch=cargo-release-compliance) with this input:
+You can also start `cargo-release-compliance` in [Studio](https://console.snowmy.app/build/workflows?workflowSearch=cargo-release-compliance) with this input:
 
 ```json
 {
@@ -91,7 +91,7 @@ You can also start `cargo-release-compliance` in [Studio](https://console.mistra
 
 ### What to look for
 
-In [Studio](https://console.mistral.ai/build/workflows/executions), inspect the child workflow for dangerous goods validation, then find the `wait_for_input` event on the anomaly path. Approve or block the shipment and confirm that the parent workflow resumes from the approval step instead of replaying the earlier activities.
+In [Studio](https://console.snowmy.app/build/workflows/executions), inspect the child workflow for dangerous goods validation, then find the `wait_for_input` event on the anomaly path. Approve or block the shipment and confirm that the parent workflow resumes from the approval step instead of replaying the earlier activities.
 
 <SectionTab as="h1" sectionId="insurance-claims">
   Insurance claims triage with vision
@@ -117,7 +117,7 @@ You can provide your own input:
 make execute-insurance-claims input='{"claim_id":"CLM-001","claimant_name":"Jane","description":"My car was hit.","photos":["examples/insurance_claims/sample_data/photos/claim_low_scratch_door.jpg"]}'
 ```
 
-Or start the workflow in [Studio](https://console.mistral.ai/build/workflows?workflowSearch=insurance-claims-triage) with this input:
+Or start the workflow in [Studio](https://console.snowmy.app/build/workflows?workflowSearch=insurance-claims-triage) with this input:
 
 ```json
 {
@@ -133,7 +133,7 @@ Or start the workflow in [Studio](https://console.mistral.ai/build/workflows?wor
 
 ### What to look for
 
-In [Studio](https://console.mistral.ai/build/workflows/executions), confirm that the `analyze_photo` activities start in parallel, then inspect the consistency check, fraud scoring, and final typed report. The routing decision comes from workflow code, not from a separate model call.
+In [Studio](https://console.snowmy.app/build/workflows/executions), confirm that the `analyze_photo` activities start in parallel, then inspect the consistency check, fraud scoring, and final typed report. The routing decision comes from workflow code, not from a separate model call.
 
 <SectionTab as="h1" sectionId="code-modernization">
   Code modernization assistant
@@ -153,7 +153,7 @@ Run the default workflow:
 make execute-code-modernization
 ```
 
-You can also start `code-modernization` in [Studio](https://console.mistral.ai/build/workflows?workflowSearch=code-modernization) with this input:
+You can also start `code-modernization` in [Studio](https://console.snowmy.app/build/workflows?workflowSearch=code-modernization) with this input:
 
 ```json
 {
@@ -164,7 +164,7 @@ You can also start `code-modernization` in [Studio](https://console.mistral.ai/b
 
 ### What to look for
 
-In [Studio](https://console.mistral.ai/build/workflows/executions), confirm that each source file appears as its own child execution. After the child workflows finish, inspect the `wait_for_input` pause, approve or decline the change set, and verify that the workflow only writes the PR proposal after approval.
+In [Studio](https://console.snowmy.app/build/workflows/executions), confirm that each source file appears as its own child execution. After the child workflows finish, inspect the `wait_for_input` pause, approve or decline the change set, and verify that the workflow only writes the PR proposal after approval.
 
 <SectionTab as="h1" sectionId="linear-summarization">
   Linear Summarization
@@ -180,7 +180,7 @@ Use this example when you want to see how connectors, on-behalf-of (OBO) authent
 
 This cookbook uses the Linear Connector with on-behalf-of (OBO) mode, which requires a hardened deployment. Before running it:
 
-1. Create a **Linear Connector** in [Studio › Context › Connectors](https://console.mistral.ai/build/connectors). Name it `linear` to match the workflow code.
+1. Create a **Linear Connector** in [Studio › Context › Connectors](https://console.snowmy.app/build/connectors). Name it `linear` to match the workflow code.
 2. Follow the auth flow to add the credential under the connector's **Credentials** tab.
 3. Bootstrap your deployment, then harden it in **Settings › Hardened Deployments**. Re-register the workflow after hardening so the OBO workflow can register successfully.
 
@@ -194,14 +194,14 @@ Run the default workflow:
 make execute-linear-summary
 ```
 
-When no input is provided, the workflow pauses and prompts for team and project in [Studio](https://console.mistral.ai/build/workflows/linear-weekly-summary). You can also provide input directly:
+When no input is provided, the workflow pauses and prompts for team and project in [Studio](https://console.snowmy.app/build/workflows/linear-weekly-summary). You can also provide input directly:
 
 ```bash
 make execute-linear-summary \
   input='{"team":"Engineering","project":"*"}'
 ```
 
-Or start `linear-weekly-summary` in [Studio](https://console.mistral.ai/build/workflows?workflowSearch=linear-weekly-summary) with this input:
+Or start `linear-weekly-summary` in [Studio](https://console.snowmy.app/build/workflows?workflowSearch=linear-weekly-summary) with this input:
 
 ```json
 {
@@ -212,7 +212,7 @@ Or start `linear-weekly-summary` in [Studio](https://console.mistral.ai/build/wo
 
 ### What to look for
 
-In [Studio](https://console.mistral.ai/build/workflows/executions), confirm that the issue-fetching and summary-generation activities run in parallel. If the team or project name cannot be resolved, the workflow pauses at a `wait_for_input` step — answer the prompt in Studio and verify that execution resumes with the corrected values. Check the final output for a structured JSON summary.
+In [Studio](https://console.snowmy.app/build/workflows/executions), confirm that the issue-fetching and summary-generation activities run in parallel. If the team or project name cannot be resolved, the workflow pauses at a `wait_for_input` step — answer the prompt in Studio and verify that execution resumes with the corrected values. Check the final output for a structured JSON summary.
 
 <SectionTab as="h1" sectionId="next-steps">
   Next steps

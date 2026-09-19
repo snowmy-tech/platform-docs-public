@@ -12,7 +12,7 @@ Gérez les espaces de travail et leurs membres à l’aide de l’API Admin.
 
 <SectionTab as="h1" sectionId="before-you-start">Avant de commencer</SectionTab>
 
-Toutes les requêtes utilisent l’URL de base `https://console.mistral.ai/api/admin` et une clé API Admin dans l’en-tête `x-api-key`. Consultez [Authentification et clés API Admin](/admin/admin-api/authentication).
+Toutes les requêtes utilisent l’URL de base `https://console.snowmy.app/api/admin` et une clé API Admin dans l’en-tête `x-api-key`. Consultez [Authentification et clés API Admin](/admin/admin-api/authentication).
 
 <SectionTab as="h1" sectionId="workspace-roles">Rôles d’espace de travail</SectionTab>
 
@@ -27,7 +27,7 @@ Les champs singuliers `role` et `role_name` sont obsolètes. Préférez les cham
 L’endpoint accepte les paramètres de requête `is_archived`, `page`, `page_size` et `search`.
 
 ```bash
-curl "https://console.mistral.ai/api/admin/workspaces?page=1&page_size=50" \
+curl "https://console.snowmy.app/api/admin/workspaces?page=1&page_size=50" \
   -H "x-api-key: $ADMIN_API_KEY"
 ```
 
@@ -36,7 +36,7 @@ curl "https://console.mistral.ai/api/admin/workspaces?page=1&page_size=50" \
 `name` et `admin_user_id` sont obligatoires. Les champs `description`, `icon` et `add_all_org_members` sont facultatifs.
 
 ```bash
-curl -X POST https://console.mistral.ai/api/admin/workspaces \
+curl -X POST https://console.snowmy.app/api/admin/workspaces \
   -H "Content-Type: application/json" \
   -H "x-api-key: $ADMIN_API_KEY" \
   -d '{
@@ -53,7 +53,7 @@ La réponse inclut l’`uuid` de l’espace de travail.
 <SectionTab as="h1" sectionId="update-workspace">Mettre à jour un espace de travail</SectionTab>
 
 ```bash
-curl -X PATCH https://console.mistral.ai/api/admin/workspaces/<WORKSPACE_UUID> \
+curl -X PATCH https://console.snowmy.app/api/admin/workspaces/<WORKSPACE_UUID> \
   -H "Content-Type: application/json" \
   -H "x-api-key: $ADMIN_API_KEY" \
   -d '{"name": "Renamed Workspace", "description": "Updated description"}'
@@ -62,7 +62,7 @@ curl -X PATCH https://console.mistral.ai/api/admin/workspaces/<WORKSPACE_UUID> \
 <SectionTab as="h1" sectionId="delete-workspace">Supprimer un espace de travail</SectionTab>
 
 ```bash
-curl -X DELETE https://console.mistral.ai/api/admin/workspaces/<WORKSPACE_UUID> \
+curl -X DELETE https://console.snowmy.app/api/admin/workspaces/<WORKSPACE_UUID> \
   -H "x-api-key: $ADMIN_API_KEY"
 ```
 
@@ -72,13 +72,13 @@ Ajoutez ou mettez à jour des membres avec un tableau `members`. Chaque objet do
 
 ```bash
 # Ajouter des membres
-curl -X POST https://console.mistral.ai/api/admin/workspaces/<WORKSPACE_UUID>/add-users \
+curl -X POST https://console.snowmy.app/api/admin/workspaces/<WORKSPACE_UUID>/add-users \
   -H "Content-Type: application/json" \
   -H "x-api-key: $ADMIN_API_KEY" \
   -d '{"members": [{"user_uuid": "<USER_UUID>", "role_names": ["user"]}]}'
 
 # Ajouter ou mettre à jour des membres (répéter la requête produit le même résultat)
-curl -X PATCH https://console.mistral.ai/api/admin/workspaces/<WORKSPACE_UUID>/users \
+curl -X PATCH https://console.snowmy.app/api/admin/workspaces/<WORKSPACE_UUID>/users \
   -H "Content-Type: application/json" \
   -H "x-api-key: $ADMIN_API_KEY" \
   -d '{"members": [{"user_uuid": "<USER_UUID>", "role_names": ["workspace_admin"]}]}'
@@ -89,7 +89,7 @@ curl -X PATCH https://console.mistral.ai/api/admin/workspaces/<WORKSPACE_UUID>/u
 Cette opération retire les utilisateurs listés de l’espace de travail et supprime leurs permissions dans cet espace.
 
 ```bash
-curl -X DELETE https://console.mistral.ai/api/admin/workspaces/<WORKSPACE_UUID>/remove-users \
+curl -X DELETE https://console.snowmy.app/api/admin/workspaces/<WORKSPACE_UUID>/remove-users \
   -H "Content-Type: application/json" \
   -H "x-api-key: $ADMIN_API_KEY" \
   -d '{"members": [{"user_uuid": "<USER_UUID_1>"}, {"user_uuid": "<USER_UUID_2>"}]}'

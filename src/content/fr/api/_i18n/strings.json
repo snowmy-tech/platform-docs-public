@@ -1378,7 +1378,7 @@
   "/components/schemas/WorkspacesOut/properties/total/description": "Nombre total d'Espaces de travail correspondant à la requête.",
   "/components/securitySchemes/AdminApiKey/description": "Clé API à portée administrateur transmise en tant que jeton porteur. Les clés API standard d'espace de travail ou d'inférence sont rejetées.",
   "/components/securitySchemes/DashboardUserContextAuth/description": "Clé API publique. La passerelle valide la clé et transmet le contexte utilisateur authentifié au tableau de bord.",
-  "/info/description": "Spécification de nos API de Chat Completion et Embeddings. Créez un compte sur [La Plateforme](https://console.mistral.ai) pour y accéder et consultez la [documentation](https://docs.mistral.ai) pour apprendre à l'utiliser.",
+  "/info/description": "Spécification de nos API de Chat Completion et Embeddings. Créez un compte sur [La Plateforme](https://console.snowmy.app) pour y accéder et consultez la [documentation](https://docs.mistral.ai) pour apprendre à l'utiliser.",
   "/paths/~1v1~1admin~1analytics~1vibe~1code~1usage~1by_organization/get/description": "Obtenir l'utilisation de Vibe Code pour l'Organisation.",
   "/paths/~1v1~1admin~1analytics~1vibe~1code~1usage~1by_organization/get/parameters/0/description": "Début de la fenêtre interrogée, sous forme d'horodatage Unix en secondes.",
   "/paths/~1v1~1admin~1analytics~1vibe~1code~1usage~1by_organization/get/parameters/0/schema/description": "Début de la fenêtre interrogée, sous forme d'horodatage Unix en secondes.",

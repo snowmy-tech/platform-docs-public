@@ -17,7 +17,7 @@ Ce guide vous explique comment créer un workflow qui exécute une seule activit
 
 Pour suivre ce guide de démarrage, il vous faut :
 
-1. Un [compte Mistral](https://console.mistral.ai/).
+1. Un [compte Mistral](https://console.snowmy.app/).
 1. [Python](https://www.python.org/downloads/) 3.12 ou version ultérieure installé sur votre machine.
 1. [uv](https://docs.astral.sh/uv/getting-started/installation/) installé dans votre environnement (`uvx` est inclus avec `uv`).
 
@@ -33,7 +33,7 @@ uvx mistralai-workflows-cli setup
 
 Cela crée la structure d’un projet Python prêt à l’emploi, avec le SDK Workflows déjà configuré, un exemple minimal de workflow et des commandes utilitaires pour lancer votre worker et démarrer des exécutions.
 
-La commande vous invite à [générer une clé API Mistral dans la Console Mistral](https://console.mistral.ai/home?profile_dialog=api-keys).
+La commande vous invite à [générer une clé API Mistral dans la Console Mistral](https://console.snowmy.app/home?profile_dialog=api-keys).
 Suivez les instructions pour générer la clé API, puis fournissez-la à la commande quand demandé. Les clés API ne sont accessibles qu’une seule fois.
 
 Ouvrez le répertoire du projet dans votre IDE préféré. Le nom par défaut est `my-workflow`, mais il correspond à ce que vous avez renseigné lors de l’étape de configuration.
@@ -122,7 +122,7 @@ Le projet `my-workflow` inclut également une commande `Makefile` pour déclench
 <Tabs>
   <TabItem value="console" label="Console">
 
-1. Ouvrez la [Console Mistral](https://console.mistral.ai/) et rendez-vous dans l’espace de travail où vous avez créé votre clé API.
+1. Ouvrez la [Console Mistral](https://console.snowmy.app/) et rendez-vous dans l’espace de travail où vous avez créé votre clé API.
 1. Cliquez sur **Workflows** dans la barre latérale.
 1. Sélectionnez **hello-world**.
 1. Lancez le workflow avec le bouton **Start Workflow** et l’entrée `{"name": <your_name>}`.

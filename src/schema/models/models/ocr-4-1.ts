@@ -40,6 +40,6 @@ export default {
 
   },
   metadata: {},
-  playground: 'https://console.mistral.ai/build/document-ai/ocr-playground',
+  playground: 'https://console.snowmy.app/build/document-ai/ocr-playground',
   legacy: false,
 } as const satisfies StaticModel;

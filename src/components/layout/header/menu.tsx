@@ -17,7 +17,7 @@ export const MobileMenu = async ({ locale }: { locale: Locale }) => {
         <Suspense>
           <MobileHeaderLinks />
         </Suspense>
-        <HeaderCta href="https://mistral.ai/contact?utm_source=docs&utm_medium=header_cta&utm_campaign=studio_trial" size="lg" variant="secondary" target='_blank'>{l.text('Reach out', { context: 'Call to contact Mistral' })}</HeaderCta>
+        <HeaderCta href="https://mistral.ai/contact" size="lg" variant="secondary" target='_blank'>{l.text('Reach out', { context: 'Call to contact Mistral' })}</HeaderCta>
         <DynamicStudioCta size="lg" className='w-full' />
       </div>
       <div className="flex border-t mt-4 dark:bg-black/20 bg-black/5 border-border/50 py-6 justify-between items-center p-sides">

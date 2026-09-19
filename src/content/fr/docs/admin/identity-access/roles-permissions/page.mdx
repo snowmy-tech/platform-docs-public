@@ -67,12 +67,12 @@ Définissez les rôles Organisation lors de la création ou de la mise à jour d
 
 ```bash
 # Rôle Organisation
-curl -X PATCH https://console.mistral.ai/api/admin/users/<USER_UUID> \
+curl -X PATCH https://console.snowmy.app/api/admin/users/<USER_UUID> \
   -H "Content-Type: application/json" -H "x-api-key: $ADMIN_API_KEY" \
   -d '{"role_names": ["member"]}'
 
 # Rôle d’espace de travail
-curl -X PATCH https://console.mistral.ai/api/admin/workspaces/<WORKSPACE_UUID>/users \
+curl -X PATCH https://console.snowmy.app/api/admin/workspaces/<WORKSPACE_UUID>/users \
   -H "Content-Type: application/json" -H "x-api-key: $ADMIN_API_KEY" \
   -d '{"members": [{"user_uuid": "<USER_UUID>", "role_names": ["workspace_admin"]}]}'
 ```
