@@ -147,9 +147,9 @@
     "fast-glob": "^3.3.3",
     "fs-extra": "^11.3.1",
     "gray-matter": "^4.0.3",
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^4.3.2",
     "markdownlint-cli2": "^0.21.0",
-    "postcss": "^8.5.6",
+    "postcss": "^8.5.23",
     "remark": "^15.0.1",
     "storybook": "^10.4.2",
     "tailwindcss": "^4.1.12",
@@ -157,7 +157,7 @@
     "tw-animate-css": "^1.3.6",
     "typescript": "^5.9.3",
     "unist-util-visit-parents": "^6.0.1",
-    "vitest": "^4.1.8"
+    "vitest": "^5.0.1"
   },
   "engines": {
     "node": ">=18.0"
