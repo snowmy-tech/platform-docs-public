@@ -1,0 +1,76 @@
+pipeline:
+  identifier: Build_snowmy_tech_platform_docs_public_1790415379477
+  name: Build platform-docs-public
+  orgIdentifier: default
+  projectIdentifier: default_project
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github
+        repoName: snowmy-tech/platform-docs-public
+  stages:
+    - stage:
+        identifier: build1
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: installdependencies
+                  name: install dependencies
+                  spec:
+                    command: npm install
+                  timeout: ""
+                  type: Run
+              - step:
+                  identifier: test
+                  name: test
+                  spec:
+                    command: npm run test
+                  timeout: ""
+                  type: Run
+              - step:
+                  identifier: lint
+                  name: lint
+                  spec:
+                    command: npm run lint
+                  timeout: ""
+                  type: Run
+              - step:
+                  identifier: build
+                  name: build
+                  spec:
+                    command: npm run build
+                  timeout: ""
+                  type: Run
+              - step:
+                  identifier: runlinter
+                  name: run linter
+                  spec:
+                    command: |-
+                      pip install flake8
+                      flake8 .
+                  timeout: ""
+                  type: Run
+              - step:
+                  identifier: setupvirtualenvironment
+                  name: setup virtual environment
+                  spec:
+                    command: |-
+                      python3 -m venv .venv
+                      . .venv/bin/activate
+                      python3 -m pip install -r requirements.txt
+                      python3 -m pip install -e .
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
