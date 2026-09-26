@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_snowmy_tech_platform_docs_public_1790415379477-push-trigger-input-set
+  identifier: Build_snowmy_tech_platform_docs_public_1790415379477pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_snowmy_tech_platform_docs_public_1790415379477
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
